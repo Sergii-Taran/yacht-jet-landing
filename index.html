@@ -51,22 +51,48 @@
 
   <body>
     <header class="header">
-      <div class="container">
+      <div class="container header-container">
         <a href="#" class="logo">yachtjet</a>
-        <nav class="nav">
-          <ul class="nav-list">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Yachts</a></li>
-            <li><a href="#">Reviews</a></li>
+        <nav class="header-nav">
+          <ul class="header-nav-list">
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">About</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">Yachts</a>
+            </li>
+            <li class="header-nav-item">
+              <a class="header-nav-link" href="#">Reviews</a>
+            </li>
           </ul>
         </nav>
-        <div>
-          <ul>
-            <li><a href="">insta</a></li>
-            <li><a href="">youtube</a></li>
-            <li><a href="">fb</a></li>
-          </ul>
-        </div>
+
+        <ul class="header-soc-list">
+          <li class="header-soc-item">
+            <a class="header-soc-link" href="">
+              <svg class="header-soc-icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-insta"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="header-soc-item">
+            <a class="header-soc-link" href=""
+              ><svg class="header-soc-icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-youtube"></use></svg
+            ></a>
+          </li>
+          <li class="header-soc-item">
+            <a class="header-soc-link" href=""
+              ><svg class="header-soc-icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-fb"></use></svg
+            ></a>
+          </li>
+        </ul>
+        <button type="button" class="menu-open-btn">
+          <svg class="menu-open-icon" width="28" height="28">
+            <use href="./images/icons.svg#icon-menu-open-btn"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
