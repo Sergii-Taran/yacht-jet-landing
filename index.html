@@ -96,7 +96,7 @@
       </div>
     </header>
 
-    <div class="mobile-menu is-open">
+    <div class="mobile-menu">
       <div class="mobile-menu-header">
         <a href="#" class="mobile-menu-logo">yachtjet</a>
         <button class="mobile-menu-close-btn" type="button">
@@ -162,21 +162,56 @@
       </section>
 
       <section class="yacht-fleet section">
-        <div class="container">
-          <h2>YachtJet fleet is here to take you on the ultimate adventure</h2>
-          <p>
-            From spacious decks to state-of-the-art technology, our yachts are
-            designed to provide the perfect blend of luxury and functionality.
-          </p>
-          <p>
-            Take a look at our selection below and choose the yacht that matches
-            your needs and preferences.No matter which yacht you choose, our
-            experienced crew will ensure that your journey is smooth and
-            enjoyable. Book now and get ready for an unforgettable adventure on
-            the high seas.
-          </p>
-          <img src="" alt="" />
+        <div class="yacht-fleet-container container">
+          <h2 class="yacht-fleet-title section-title">
+            YachtJet fleet is here to take you on the ultimate adventure
+          </h2>
+
+          <div class="yacht-fleet-text">
+            <p>
+              From spacious decks to state-of-the-art technology, our yachts are
+              designed to provide the perfect blend of luxury and functionality.
+            </p>
+            <p>
+              Take a look at our selection below and choose the yacht that
+              matches your needs and preferences. No matter which yacht you
+              choose, our experienced crew will ensure that your journey is
+              smooth and enjoyable. Book now and get ready for an unforgettable
+              adventure on the high seas.
+            </p>
+          </div>
         </div>
+
+        <picture class="yacht-fleet-picture">
+          <source
+            srcset="
+              ./images/fleet/fleet-440.jpg,
+              ./images/fleet/fleet-440@2x.jpg 2x
+            "
+            media="(min-width: 1440px)" />
+          <source
+            srcset="
+              ./images/fleet/fleet-280.jpg,
+              ./images/fleet/fleet-280@2x.jpg 2x
+            "
+            media="(min-width: 1280px) and (max-width: 1439px)" />
+          <source
+            srcset="
+              ./images/fleet/fleet-tab.jpg,
+              ./images/fleet/fleet-tab@2x.jpg 2x
+            "
+            media="(min-width: 768px)" />
+          <source
+            srcset="
+              ./images/fleet/fleet-mob.jpg,
+              ./images/fleet/fleet-mob@2x.jpg 2x
+            "
+            media="(max-width: 767px)" />
+          <img
+            class="yacht-fleet-img"
+            src="./images/fleet/fleet-280.jpg"
+            alt="yacht in the sea"
+        /></picture>
       </section>
 
       <section class="offer section">
