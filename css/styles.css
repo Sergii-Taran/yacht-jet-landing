@@ -548,17 +548,20 @@ button {
   position: relative;
   background-color: var(--color-light);
   border-radius: 24px 24px 0 0;
-  padding: 40px 20px 0;
+  padding: 40px 20px 140px;
   max-width: 335px;
   width: 100%;
   text-align: center;
 
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  overflow: visible;
 }
 
 .yacht-fleet-title {
   color: var(--color-dark);
-  margin-bottom: 40px;
   text-align: left;
   width: 260px;
 }
@@ -568,6 +571,7 @@ button {
   flex-direction: column;
   text-align: left;
   gap: 20px;
+  width: 295px;
 }
 
 .yacht-fleet-text p:first-of-type {
@@ -590,10 +594,11 @@ button {
   bottom: -100px;
   left: 50%;
   transform: translateX(-50%);
-  width: 335px;
-  height: 395px;
+  width: 336px;
+  height: 393px;
   border-radius: 24px;
   overflow: hidden;
+  z-index: 3;
 }
 
 .yacht-fleet-img {
@@ -604,12 +609,80 @@ button {
 }
 
 @media screen and (min-width: 768px) {
+  .yacht-fleet {
+    margin-top: -67px;
+  }
+
+  .yacht-fleet-container {
+    padding: 50px 32px 326px;
+    max-width: 704px;
+
+    gap: 50px;
+  }
+
+  .yacht-fleet-title {
+    width: 536px;
+  }
+
+  .yacht-fleet-text {
+    width: 389px;
+  }
+
+  .yacht-fleet-text p:first-of-type {
+    font-size: 23px;
+  }
+
+  .yacht-fleet-text p:last-of-type {
+    font-size: 13px;
+    line-height: 1.15;
+  }
+
+  .yacht-fleet-picture {
+    bottom: -276px;
+    width: 704px;
+    height: 467px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .yacht-fleet {
+    margin-top: -35px;
+  }
+
+  .yacht-fleet-container {
+    padding: 50px 50px 287px;
+    max-width: 1180px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .yacht-fleet-text {
+    width: 354px;
+  }
+
+  .yacht-fleet-picture {
+    bottom: -171px;
+    width: 1181px;
+    height: 467px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .yacht-fleet-container {
+    padding-bottom: 232px;
+    max-width: 1340px;
+  }
+
+  .yacht-fleet-text {
+    width: 404px;
+  }
+
+  .yacht-fleet-picture {
+    bottom: -132px;
+    width: 1341px;
+    height: 467px;
+  }
 }
 
 /* ----------------------- */
@@ -627,8 +700,59 @@ button {
 
 @media screen and (min-width: 1440px) {
 }
-/* ----------------------- */
-/* ------- section ------- */
+/* -------------------------- */
+/* ------- activities ------- */
+
+.activities {
+  margin: 40px 0;
+}
+
+.activities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.activities-list {
+  background-color: var(--color-dark);
+  border-radius: 24px;
+  padding: 80px 20px;
+  max-width: 335px;
+
+  list-style: none; /* прибираємо стандартну нумерацію */
+  counter-reset: activity-counter;
+  margin: 0;
+  padding: 0;
+}
+
+.activities-item {
+  counter-increment: activity-counter;
+  position: relative;
+  padding: 20px 0 0 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.activities-list::before {
+  content: counter(activity-counter, decimal-leading-zero);
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.activities-list:last-child {
+  border-bottom: none;
+}
+
+.activities-item-text {
+}
+
+.activities-img {
+}
 
 @media screen and (min-width: 768px) {
 }
