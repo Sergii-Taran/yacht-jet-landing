@@ -230,36 +230,72 @@
         <div class="activities-container container">
           <h2 class="activities-title visually-hidden">Features</h2>
 
-          <ol class="activities-list">
-            <li class="activities-item">
-              <p class="activities-item-text">
+          <div class="activities-text-content">
+            <div class="activity-item">
+              <p class="activity-number">01</p>
+              <p class="activity-text">
                 Swimming and water sports: try your hand at water skiing
               </p>
-            </li>
-            <li class="activities-item">
-              <p class="activities-item-text">
-                Fishing: try to catch your own dinner
-              </p>
-            </li>
-            <li class="activities-item">
-              <p class="activities-item-text">
+            </div>
+
+            <div class="activity-item">
+              <p class="activity-number">02</p>
+              <p class="activity-text">Fishing: try to catch your own dinner</p>
+            </div>
+
+            <div class="activity-item">
+              <p class="activity-number">03</p>
+              <p class="activity-text">
                 Sightseeing tours: take a shore or island tour, enjoy the views
                 and sunsets from the water
               </p>
-            </li>
-            <li class="activities-item">
-              <p class="activities-item-text">
+            </div>
+
+            <div class="activity-item">
+              <p class="activity-number">04</p>
+              <p class="activity-text">
                 Rest and relaxation: read a book or listen to music while
                 enjoying the outdoor atmosphere.
               </p>
-            </li>
-          </ol>
+            </div>
+          </div>
 
-          <img
-            class="activities-img"
-            src="./images/activities/activities-280.jpg"
-            alt="VIP cabin"
-          />
+          <picture class="activities-pictures">
+            <source
+              srcset="
+                ./images/activities/activities-440.jpg,
+                ./images/activities/activities-440@2x.jpg 2x
+              "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="
+                ./images/activities/activities-280.jpg,
+                ./images/activities/activities-280@2x.jpg 2x
+              "
+              media="(min-width: 1280px) and (max-width: 1439px)"
+            />
+            <source
+              srcset="
+                ./images/activities/activities-tab.jpg,
+                ./images/activities/activities-tab@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/activities/activities-mob.jpg,
+                ./images/activities/activities-mob@2x.jpg 2x
+              "
+              media="(max-width: 767px)"
+            />
+
+            <img
+              class="activities-img"
+              src="./images/activities/activities-280.jpg"
+              alt="VIP cabin"
+            />
+          </picture>
         </div>
       </section>
 
