@@ -701,7 +701,7 @@ button {
 @media screen and (min-width: 1440px) {
 }
 /* -------------------------- */
-/* ------- activities ------- */
+/* ------- activities section ------- */
 
 .activities {
   background-color: var(--color-bg);
@@ -860,9 +860,164 @@ button {
 }
 
 /* ----------------------- */
-/* ------- section ------- */
+/* ------- rent section ------- */
+
+.rent {
+  background-color: var(--color-bg);
+  padding: 40px 0;
+}
+
+.rent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+
+.rent-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+  max-width: 335px;
+}
+
+.rent-title {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.rent-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+}
+
+.form-textarea {
+  min-height: 108px;
+  resize: none;
+}
+
+.form-textarea + .form-btn {
+  margin-top: 22px;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(251, 251, 251, 0.2);
+  border-radius: 12px;
+  color: var(--color-light);
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  padding: 14px 18px;
+  transition: border-color 250ms ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: rgba(251, 251, 251, 0.4);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-textarea {
+  min-height: 108px;
+  resize: none;
+  margin-bottom: 22px;
+}
+
+.form-btn {
+  align-self: flex-start;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  border: none;
+  border-radius: 15px;
+  padding: 14px 44px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  cursor: pointer;
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+.form-btn:hover,
+.form-btn:focus {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
+
+.rent-picture {
+  border-radius: 24px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 335px;
+}
+
+.rent-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media screen and (min-width: 768px) {
+  .rent {
+    padding: 75px 0;
+  }
+
+  .rent-container {
+    gap: 100px;
+  }
+
+  .rent-content {
+    gap: 50px;
+    max-width: 473px;
+  }
+
+  .form-textarea {
+    min-height: 116px;
+  }
+
+  .form-textarea + .form-btn {
+    margin-top: 32px;
+  }
+
+  .form-input,
+  .form-textarea {
+    padding: 18px;
+  }
+
+  .form-input::placeholder,
+  .form-textarea::placeholder {
+    font-size: 14px;
+  }
+
+  .form-btn {
+    padding: 18px 75px;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .rent-picture {
+    max-width: 704px;
+  }
 }
 
 @media screen and (min-width: 1280px) {

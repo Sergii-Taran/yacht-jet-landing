@@ -300,14 +300,93 @@
       </section>
 
       <section class="rent section">
-        <div class="container">
-          <img src="" alt="" />
-          <h2>Rent a yacht now</h2>
-          <form>
-            <input type="text" /><input type="text" /><input type="text" />
-            <textarea name="" id=""></textarea>
-            <button type="submit"></button>
-          </form>
+        <div class="rent-container container">
+          <div class="rent-content">
+            <h2 class="rent-title">Rent a yacht now</h2>
+
+            <form class="rent-form">
+              <div class="form-field">
+                <input
+                  type="text"
+                  name="full-name"
+                  id="full-name"
+                  class="form-input"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="form-input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  class="form-input"
+                  placeholder="Phone number"
+                  required
+                />
+              </div>
+
+              <div class="form-field">
+                <textarea
+                  name="comment"
+                  id="comment"
+                  class="form-textarea"
+                  placeholder="Comment"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="form-btn">Send</button>
+            </form>
+          </div>
+
+          <picture class="rent-picture">
+            <source
+              srcset="
+                ./images/rent/rent-440.jpg,
+                ./images/rent/rent-440@2x.jpg 2x
+              "
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="
+                ./images/rent/rent-280.jpg,
+                ./images/rent/rent-280@2x.jpg 2x
+              "
+              media="(min-width: 1280px)"
+            />
+            <source
+              srcset="
+                ./images/rent/rent-tab.jpg,
+                ./images/rent/rent-tab@2x.jpg 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="
+                ./images/rent/rent-mob.jpg,
+                ./images/rent/rent-mob@2x.jpg 2x
+              "
+              media="(max-width: 767px)"
+            />
+
+            <img
+              src="./images/rent/rent-280.jpg"
+              alt="Luxury yacht at sunset"
+              class="rent-img"
+            />
+          </picture>
         </div>
       </section>
 
