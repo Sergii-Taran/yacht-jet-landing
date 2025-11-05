@@ -388,7 +388,7 @@ button {
   color: rgba(251, 251, 251, 0.8);
 }
 
-/* ----------------------- */
+/* -------------------- */
 /* ------- hero ------- */
 
 .hero {
@@ -531,8 +531,8 @@ button {
   }
 }
 
-/* ----------------------- */
-/* ------- yacht-fleet ------- */
+/* ----------------------------------- */
+/* ------- yacht-fleet section ------- */
 
 .yacht-fleet {
   position: relative;
@@ -700,7 +700,8 @@ button {
 
 @media screen and (min-width: 1440px) {
 }
-/* -------------------------- */
+
+/* ---------------------------------- */
 /* ------- activities section ------- */
 
 .activities {
@@ -895,15 +896,6 @@ button {
   gap: 18px;
 }
 
-.form-textarea {
-  min-height: 108px;
-  resize: none;
-}
-
-.form-textarea + .form-btn {
-  margin-top: 22px;
-}
-
 .form-field {
   width: 100%;
 }
@@ -991,14 +983,6 @@ button {
     max-width: 473px;
   }
 
-  .form-textarea {
-    min-height: 116px;
-  }
-
-  .form-textarea + .form-btn {
-    margin-top: 32px;
-  }
-
   .form-input,
   .form-textarea {
     padding: 18px;
@@ -1007,6 +991,11 @@ button {
   .form-input::placeholder,
   .form-textarea::placeholder {
     font-size: 14px;
+  }
+
+  .form-textarea {
+    min-height: 116px;
+    margin-bottom: 32px;
   }
 
   .form-btn {
@@ -1021,9 +1010,21 @@ button {
 }
 
 @media screen and (min-width: 1280px) {
+  .rent-container {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .rent-picture {
+    max-width: 658px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .rent-picture {
+    max-width: 768px;
+  }
 }
 
 /* ----------------------- */
