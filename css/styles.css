@@ -886,7 +886,7 @@ button {
   }
 
   .yacht-catalog-card {
-    width: calc((100% - 25px) / 3);
+    width: calc((100% - 25px * 2) / 3);
   }
 }
 
@@ -905,7 +905,7 @@ button {
   }
 
   .yacht-catalog-card {
-    width: calc(((100% - 32px) / 3));
+    width: calc(((100% - 32px * 2) / 3));
   }
 }
 
@@ -1236,15 +1236,150 @@ button {
 }
 
 /* ----------------------- */
-/* ------- section ------- */
+/* ------- reviews section ------- */
+
+.reviews {
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reviews-title {
+  max-width: 320px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.reviews-text {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--color-light);
+  margin-bottom: 40px;
+  max-width: 335px;
+
+  opacity: 0.4;
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.reviews-card {
+  border-radius: 24px;
+  padding: 32px 8px;
+  width: 100%;
+  max-width: 335px;
+  height: auto;
+
+  background-color: var(--color-light);
+}
+
+.reviews-card:nth-child(2),
+.reviews-card:nth-child(3) {
+  display: none;
+}
+
+.reviews-img {
+  display: block;
+  margin: 0 auto;
+  width: 56px;
+  height: auto;
+  margin-bottom: 24px;
+  border-radius: 50%;
+}
+
+.reviews-card-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--color-bg);
+  margin-bottom: 8px;
+}
+
+.reviews-card-text {
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(4, 3, 6, 0.4);
+  max-width: 303px;
+  margin: 0 auto;
+}
 
 @media screen and (min-width: 768px) {
+  .reviews {
+    padding-top: 75px;
+    padding-bottom: 150px;
+  }
+
+  .reviews-title {
+    max-width: 704px;
+  }
+
+  .reviews-text {
+    font-size: 14px;
+    line-height: 1.29;
+    margin-bottom: 75px;
+    max-width: 570px;
+  }
+
+  .reviews-list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .reviews-card:nth-child(2) {
+    display: block;
+  }
+
+  .reviews-card {
+    max-width: 336px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .reviews-title {
+    max-width: 800px;
+  }
+
+  .reviews-list {
+    gap: 26px;
+  }
+
+  .reviews-card:nth-child(3) {
+    display: block;
+  }
+
+  .reviews-card {
+    max-width: 376px;
+    padding: 32px 28px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .reviews-list {
+    gap: 32px;
+  }
+
+  .reviews-card {
+    max-width: 392px;
+    padding: 32px 36px;
+  }
 }
 
 /* ---------------------- */
