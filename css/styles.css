@@ -1220,8 +1220,12 @@ button {
 @media screen and (min-width: 1280px) {
   .rent-container {
     flex-direction: row-reverse;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
+  }
+
+  .form-textarea {
+    margin-bottom: 16px;
   }
 
   .rent-picture {
@@ -1385,195 +1389,162 @@ button {
 /* ---------------------- */
 /* ------- footer ------- */
 
-/* .footer {
-}
-
 .footer-container {
-  padding: 40px 0 20px;
-  border-radius: 24px 24px 0 0;
-  width: 355px;
-  background-color: var(--color-dark);
-  text-align: center;
-}
-
-.footer-logo {
-  display: inline-block;
-  font-weight: 500;
-  font-size: 14px;
-  color: var(--color-light);
-
-  margin-bottom: 24px;
-}
-
-.footer-nav {
-}
-
-.footer-nav-list {
-}
-
-.footer-nav-item {
-}
-
-.footer-nav-link {
-}
-
-.footer-social-list {
-}
-
-.footer-social-item {
-}
-
-.footer-social-link {
-}
-
-.footer-social-icon {
-}
-
-.footer-text {
-}
-
-.footer-bottom {
-}
-
-.footer-copy {
-}
-
-.footer-policy {
-} */
-
-.footer {
   padding-top: 40px;
   padding-bottom: 20px;
   background-color: var(--color-dark);
   border-radius: 24px 24px 0 0;
-  width: 355px;
-  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   text-align: center;
 }
 
-/* Контейнер */
-.footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* --- Верхній ряд: логотип + навігація --- */
 .footer-top {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
   gap: 24px;
-  flex-wrap: wrap; /* щоб не ламалось на дуже вузьких екранах */
+
+  margin-bottom: 40px;
 }
 
 .footer-logo {
-  font-weight: 700;
-  font-size: 18px;
-  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.03em;
+  text-transform: lowercase;
   text-decoration: none;
+  color: var(--color-light);
 }
 
-/* --- Меню --- */
+.footer-nav {
+  flex-shrink: 0;
+}
+
 .footer-nav-list {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .footer-nav-link {
   display: inline-block;
-  padding: 8px 14px;
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px 12px;
   border-radius: 8px;
+  width: 66px;
+  background-color: rgba(251, 251, 251, 0.3);
+  color: var(--color-light);
   text-decoration: none;
-  color: #ffffff;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
+  font-size: 9px;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.footer-nav-link:hover,
-.footer-nav-link:focus {
-  background-color: rgba(255, 255, 255, 0.2);
+.footer-nav-link:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
 }
 
-/* --- Соцмережі під логотипом і меню --- */
 .footer-social-list {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 16px;
-}
-
-.footer-social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  order: 3;
+  margin-top: 80px;
 }
 
 .footer-social-icon {
-  fill: #ffffff;
+  fill: var(--color-light);
   transition: fill 0.3s ease;
 }
 
-.footer-social-link:hover .footer-social-icon,
-.footer-social-link:focus .footer-social-icon {
-  fill: #00bcd4;
+.footer-social-link:hover .footer-social-icon {
+  fill: rgba(251, 251, 251, 0.8);
 }
 
-/* --- Текст --- */
 .footer-text {
-  max-width: 320px;
-  margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #f1f1f1;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--color-light);
+  max-width: 275px;
+  width: 100%;
+
+  margin-bottom: 82px;
 }
 
-/* --- Нижній рядок --- */
 .footer-bottom {
   display: flex;
-  /* flex-direction: column; */
+
   align-items: center;
+  justify-content: center;
   gap: 20px;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-  text-align: center;
+
   color: rgba(251, 251, 251, 0.4);
 }
 
-.footer-policy {
-  color: rgba(251, 251, 251, 0.4);
-  text-decoration: none;
-}
-
-.footer-policy:hover,
-.footer-policy:focus {
-  color: var(--color-light);
-}
-
 @media screen and (min-width: 768px) {
-}
+  .footer-container {
+    padding-top: 50px;
+  }
 
-@media screen and (min-width: 1280px) {
-}
+  .footer-top {
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
 
-@media screen and (min-width: 1440px) {
-}
+    margin-bottom: 96px;
+  }
 
-/* ---------------------------- */
-/* ------- modal window ------- */
+  .footer-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-@media screen and (min-width: 768px) {
-}
+  .footer-logo {
+    font-size: 20px;
+  }
 
-@media screen and (min-width: 1280px) {
-}
+  .footer-nav-link {
+    padding: 15px 24px;
+    width: 90px;
+  }
 
-@media screen and (min-width: 1440px) {
+  .footer-social-list {
+    width: auto;
+    order: 0;
+    margin-top: 0;
+  }
+
+  .footer-text {
+    font-size: 32px;
+    max-width: 610px;
+
+    margin-bottom: 100px;
+  }
+
+  .footer-bottom {
+    gap: 32px;
+
+    font-size: 14px;
+    line-height: 1.18;
+  }
 }
 
 /* ---------------------------- */
